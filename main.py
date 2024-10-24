@@ -38,7 +38,7 @@ class MyBot(commands.Bot):
     async def setup_hook(self):
         # await self.tree.sync(guild=None)
         for extension in extensions:
-            print("Loading ",extension),
+            print("Loading ",extension), 
             await self.load_extension(extension)
 
 if __name__ == "__main__":
