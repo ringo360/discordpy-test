@@ -23,7 +23,7 @@ async def on_ready():
     print("Ready 🚀")
 
 extensions = (
-    "extensions.hoge"
+    "extensions.hoge",
     # "extensions.huga",
 )
 
@@ -38,7 +38,8 @@ class MyBot(commands.Bot):
     async def setup_hook(self):
         # await self.tree.sync(guild=None)
         for extension in extensions:
-            await self.load_extension(extensions)
+            print("Loading ",extension)
+            await self.load_extension(extension)
 
 if __name__ == "__main__":
     MyBot().run(TOKEN)
