@@ -14,7 +14,7 @@ class __Cog(commands.Cog):
 
         @app_commands.command(name="example", description="test")
         async def est(interaction: discord.Interaction):
-            await interaction.response.send_message('It works! ✨') 
+            await interaction.response.send_message('It works! ✨')
 
 async def setup(bot):
     print('hoge is ready 🔥')
